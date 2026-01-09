@@ -7,7 +7,7 @@ import ResultDetails from './pages/ResultDetails';
 
 function App() {
   return (
-    <div className='App bg-zinc-800 min-h-[100dvh] text-white'>
+    <div className='App bg-zinc-800 min-h-screen min-h-[100dvh] text-white w-full'>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
