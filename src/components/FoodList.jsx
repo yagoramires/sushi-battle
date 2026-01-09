@@ -38,9 +38,9 @@ const FoodList = () => {
     <ul className='flex flex-col flex-1 gap-2 mt-8  w-full max-w-[896px] mx-auto'>
       {categoryList?.map((category, index) => (
         <div key={index} className='flex flex-col mb-2 gap-[6px]'>
-          <div className='flex justify-between items-center'>
-            <h2 className='font-bold text-xl'>{category}</h2>
-            <button onClick={() => hideCategoryHandler(index)}>
+          <button className='flex justify-between items-center' onClick={() => hideCategoryHandler(index)}>
+            <span className='font-bold text-xl'>{category}</span>
+            <span>
               <MdKeyboardArrowDown
                 size={20}
                 className={`transition duration-200 ${
@@ -50,8 +50,8 @@ const FoodList = () => {
                     : ''
                 }`}
               />
-            </button>
-          </div>
+            </span>
+          </button>
           <ul
             className={`flex flex-col gap-2 ${
               showCategory[index]?.category === category &&
