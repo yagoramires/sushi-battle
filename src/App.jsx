@@ -14,6 +14,10 @@ function App() {
         <Route path='/result' element={<Result />} />
         <Route path='/result-details' element={<ResultDetails />} />
       </Routes>
+
+      <footer className='text-center text-xs text-zinc-400 p-2'>
+        Created by neyago jr. o <span className='text-orange-600 font-bold'>príncipe</span> do frontend (o <span className='text-orange-600 font-bold'>rei</span> é o vv)
+      </footer>
     </div>
   );
 }
