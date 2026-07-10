@@ -32,3 +32,5 @@ pnpm-lock.yaml
 
 # stray screenshots at repo root
 /*.png
+.vercel
+.env*
