@@ -26,3 +26,4 @@ dist-ssr
 # process docs, local only
 docs/superpowers/
 .playwright-mcp/
+.superpowers/
