@@ -28,3 +28,4 @@ dist-ssr
 docs/superpowers/
 .playwright-mcp/
 .superpowers/
+pnpm-lock.yaml

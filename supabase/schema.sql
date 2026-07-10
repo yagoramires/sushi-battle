@@ -5,6 +5,8 @@ create table rooms (
   name text not null,
   rodizio_price int not null,            -- cents
   menu text not null default 'rodizio',  -- 'rodizio' | 'executivo'
+  host_id uuid references players(id) on delete set null, -- who can finish the table
+  ended_at timestamptz,                  -- set when the host finishes; flips everyone to the result page
   created_at timestamptz default now()
 );
 
@@ -27,5 +29,11 @@ alter table players enable row level security;
 create policy rooms_all on rooms for all using (true) with check (true);
 create policy players_all on players for all using (true) with check (true);
 
--- live leaderboard: broadcast player row changes
+-- live leaderboard: broadcast player row changes; rooms broadcasts the finish
 alter publication supabase_realtime add table players;
+alter publication supabase_realtime add table rooms;
+
+-- Note: host_id/ended_at were added later via migration sushi_battle_finish_and_host:
+--   alter table rooms add column host_id uuid references players(id) on delete set null;
+--   alter table rooms add column ended_at timestamptz;
+--   alter publication supabase_realtime add table rooms;

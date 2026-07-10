@@ -1,13 +1,50 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import menu from '@/menu.json';
+import { supabase } from '@/lib/supabase';
 import { applyDelta, pushPlayer } from '@/lib/consume';
+import { finishRoom } from '@/lib/rooms';
 import { profitCents, formatBRL } from '@/lib/money';
 import Counter from './Counter';
 import Leaderboard from './Leaderboard';
 
 export default function RoomView({ room, player }) {
+  const router = useRouter();
   const items = menu[room.menu];
+  const isHost = player.id === room.host_id;
+  const [ending, setEnding] = useState(false);
+
+  // When the host ends the table, everyone flips to the shared result page.
+  useEffect(() => {
+    if (room.ended_at) {
+      router.replace('/resultado/' + room.code);
+      return;
+    }
+    const ch = supabase
+      .channel('room-meta-' + room.id)
+      .on(
+        'postgres_changes',
+        { event: 'UPDATE', schema: 'public', table: 'rooms', filter: 'id=eq.' + room.id },
+        (payload) => {
+          if (payload.new?.ended_at) router.replace('/resultado/' + room.code);
+        }
+      )
+      .subscribe();
+    return () => supabase.removeChannel(ch);
+  }, [room.id, room.code, room.ended_at, router]);
+
+  async function endTable() {
+    if (!window.confirm('Finalizar a mesa? Ninguém conta mais e todo mundo vê o resultado.')) return;
+    setEnding(true);
+    try {
+      await finishRoom(room.id);
+      router.replace('/resultado/' + room.code);
+    } catch {
+      setEnding(false);
+      window.alert('Não deu pra finalizar. Tenta de novo.');
+    }
+  }
 
   const initial = {
     pieces: player.pieces,
@@ -176,7 +213,19 @@ export default function RoomView({ room, player }) {
       {/* Tab content */}
       <main className="flex-1 px-4 py-4">
         {tab === 'placar' ? (
-          <Leaderboard room={room} meId={player.id} />
+          <>
+            <Leaderboard room={room} meId={player.id} />
+            {isHost && (
+              <button
+                onClick={endTable}
+                disabled={ending}
+                className="mt-6 w-full rounded-xl border py-3 text-sm font-semibold disabled:opacity-60"
+                style={{ borderColor: 'var(--line)', color: 'var(--tuna)' }}
+              >
+                {ending ? 'Finalizando…' : 'Finalizar mesa e ver resultado'}
+              </button>
+            )}
+          </>
         ) : (
           <Counter items={items} counts={me.counts} onChange={change} />
         )}

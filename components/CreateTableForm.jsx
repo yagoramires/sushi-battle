@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { createRoom, joinRoom } from '@/lib/rooms';
+import { createRoom, joinRoom, setRoomHost } from '@/lib/rooms';
 import { saveSession } from '@/lib/session';
 import { parseBRLToCents } from '@/lib/money';
 
@@ -32,6 +32,7 @@ export default function CreateTableForm() {
     try {
       const room = await createRoom({ name, menu, rodizioPrice });
       const { player } = await joinRoom({ code: room.code, name: nick });
+      await setRoomHost(room.id, player.id); // best-effort; won't throw
       saveSession({ code: room.code, playerId: player.id });
       router.push('/mesa/' + room.code);
     } catch {
