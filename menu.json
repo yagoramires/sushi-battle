@@ -40,31 +40,31 @@
       "id": "novidades-menu-rodizio-sushi-salmao",
       "name": "SUSHI SALMÃO",
       "cat": "NOVIDADES MENU RODÍZIO",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "novidades-menu-rodizio-sushi-atum",
       "name": "SUSHI ATUM",
       "cat": "NOVIDADES MENU RODÍZIO",
-      "valueCents": 2090
+      "valueCents": 1045
     },
     {
       "id": "novidades-menu-rodizio-sushi-peixe-branco",
       "name": "SUSHI PEIXE BRANCO",
       "cat": "NOVIDADES MENU RODÍZIO",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "novidades-menu-rodizio-mini-hot-chilli",
       "name": "Mini Hot Chilli",
       "cat": "NOVIDADES MENU RODÍZIO",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "novidades-menu-rodizio-marinado-peixe-branco",
       "name": "Marinado Peixe Branco",
       "cat": "NOVIDADES MENU RODÍZIO",
-      "valueCents": 3460
+      "valueCents": 115
     },
     {
       "id": "entradas-sunomono",
@@ -100,7 +100,7 @@
       "id": "entradas-harumaki-de-camarao",
       "name": "Harumaki de Camarão",
       "cat": "Entradas",
-      "valueCents": 2490
+      "valueCents": 498
     },
     {
       "id": "entradas-camarao-empanado",
@@ -118,7 +118,7 @@
       "id": "entradas-guioza-suino",
       "name": "Guioza Suíno",
       "cat": "Entradas",
-      "valueCents": 2590
+      "valueCents": 518
     },
     {
       "id": "entradas-kakiague-de-milho",
@@ -136,7 +136,7 @@
       "id": "entradas-harumaki-de-legumes",
       "name": "Harumaki de legumes",
       "cat": "Entradas",
-      "valueCents": 2490
+      "valueCents": 498
     },
     {
       "id": "entradas-robata-de-carne",
@@ -196,187 +196,187 @@
       "id": "marinados-marinado-trufado",
       "name": "Marinado Trufado",
       "cat": "Marinados",
-      "valueCents": 6920
+      "valueCents": 231
     },
     {
       "id": "marinados-sashimi-roasted-no-alho",
       "name": "Sashimi Roasted no Alho",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-marinado-de-ervas",
       "name": "Marinado de Ervas",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-marinado-de-salmao-com-alcaparras",
       "name": "Marinado de Salmão com Alcaparras",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-sashimi-roasted-ao-mel",
       "name": "Sashimi Roasted ao Mel (Novidade)",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-marinado-de-polvo",
       "name": "Marinado de Polvo (Novo)",
       "cat": "Marinados",
-      "valueCents": 6990
+      "valueCents": 233
     },
     {
       "id": "marinados-marinado-saint-peter",
       "name": "Marinado Saint Peter (Novo)",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "hot-rolls-mini-hot-couve",
       "name": "Mini-Hot Couve",
       "cat": "Hot Rolls",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-rolls-mini-hot-spicy",
       "name": "Mini-Hot Spicy",
       "cat": "Hot Rolls",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-rolls-hot-salmao-philadelphia",
       "name": "Hot Salmão Philadelphia",
       "cat": "Hot Rolls",
-      "valueCents": 3338
+      "valueCents": 417
     },
     {
       "id": "hot-rolls-mauro-naves",
       "name": "Mauro Naves",
       "cat": "Hot Rolls",
-      "valueCents": 3338
+      "valueCents": 417
     },
     {
       "id": "hot-rolls-mini-hot-crispy",
       "name": "Mini-Hot Crispy",
       "cat": "Hot Rolls",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-rolls-mini-hot-rapadura",
       "name": "Mini-Hot Rapadura",
       "cat": "Hot Rolls",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-rolls-mini-hot-camarao",
       "name": "Mini-Hot Camarão (Novo)",
       "cat": "Hot Rolls",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "yakissoba-carne-e-frango",
       "name": "Carne e frango",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "yakissoba-camarao",
       "name": "Camarão",
       "cat": "Yakissoba",
-      "valueCents": 4390
+      "valueCents": 2195
     },
     {
       "id": "yakissoba-legumes",
       "name": "Legumes",
       "cat": "Yakissoba",
-      "valueCents": 3350
+      "valueCents": 1675
     },
     {
       "id": "yakissoba-frango",
       "name": "Frango",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "yakissoba-carne",
       "name": "Carne",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "teppan-salmao",
       "name": "Salmão",
       "cat": "Teppan",
-      "valueCents": 7290
+      "valueCents": 3645
     },
     {
       "id": "sashimi-atum-salmao-peixe-branco-polvo-haddock",
       "name": "Atum | Salmão | Peixe Branco | Polvo | Haddock",
       "cat": "Sashimi",
-      "valueCents": 3774
+      "valueCents": 755
     },
     {
       "id": "sushi-sushi-camarao",
       "name": "Sushi Camarão",
       "cat": "Sushi",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "sushi-sushi-salmao-trufado",
       "name": "Sushi Salmão Trufado",
       "cat": "Sushi",
-      "valueCents": 2390
+      "valueCents": 1195
     },
     {
       "id": "sushi-sushi-salmao",
       "name": "Sushi Salmão",
       "cat": "Sushi",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "sushi-sushi-salmao-selado-no-alho",
       "name": "Sushi Salmão Selado no Alho",
       "cat": "Sushi",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "sushi-sushi-salmao-skin",
       "name": "Sushi Salmão Skin",
       "cat": "Sushi",
-      "valueCents": 1790
+      "valueCents": 895
     },
     {
       "id": "sushi-sushi-atum",
       "name": "Sushi Atum",
       "cat": "Sushi",
-      "valueCents": 2090
+      "valueCents": 1045
     },
     {
       "id": "sushi-sushi-peixe-branco",
       "name": "Sushi Peixe Branco",
       "cat": "Sushi",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "sushi-sushi-skin-naves",
       "name": "Sushi Skin Naves",
       "cat": "Sushi",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "sushi-sushi-de-saint-peter-macaricado",
       "name": "Sushi de Saint Peter Maçaricado (Novo)",
       "cat": "Sushi",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "sushi-sushi-de-polvo",
       "name": "Sushi de Polvo (Novo)",
       "cat": "Sushi",
-      "valueCents": 3290
+      "valueCents": 1645
     },
     {
       "id": "temakis-salmao",
@@ -418,115 +418,115 @@
       "id": "gunkas-gunka-shake-negui",
       "name": "Gunka Shakê Negui",
       "cat": "Gunkas",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "gunkas-gunka-crunchy",
       "name": "Gunka Crunchy",
       "cat": "Gunkas",
-      "valueCents": 1780
+      "valueCents": 890
     },
     {
       "id": "gunkas-gunka-crispy",
       "name": "Gunka Crispy",
       "cat": "Gunkas",
-      "valueCents": 1690
+      "valueCents": 845
     },
     {
       "id": "gunkas-gunka-luka",
       "name": "Gunka Luka",
       "cat": "Gunkas",
-      "valueCents": 1570
+      "valueCents": 785
     },
     {
       "id": "gunkas-gunka-massago",
       "name": "Gunka Massagô",
       "cat": "Gunkas",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "gunkas-gunka-rapadura",
       "name": "Gunka Rapadura",
       "cat": "Gunkas",
-      "valueCents": 1890
+      "valueCents": 945
     },
     {
       "id": "gunkas-gunka-ebi-furai",
       "name": "Gunka Ebi Furai",
       "cat": "Gunkas",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "gunkas-gunka-couve",
       "name": "Gunka Couve (Novo)",
       "cat": "Gunkas",
-      "valueCents": 1780
+      "valueCents": 890
     },
     {
       "id": "gunkas-gunka-pistache",
       "name": "Gunka Pistache (Novo)",
       "cat": "Gunkas",
-      "valueCents": 2090
+      "valueCents": 1045
     },
     {
       "id": "gunkas-gunka-abacaxi",
       "name": "Gunka Abacaxi",
       "cat": "Gunkas",
-      "valueCents": 1690
+      "valueCents": 845
     },
     {
       "id": "rolls-hossomaki-filadelfia",
       "name": "Hossomaki Filadelfia",
       "cat": "Rolls",
-      "valueCents": 2438
+      "valueCents": 305
     },
     {
       "id": "rolls-uramaki-filadelfia",
       "name": "Uramaki Filadélfia",
       "cat": "Rolls",
-      "valueCents": 2438
+      "valueCents": 305
     },
     {
       "id": "rolls-uramaki-california",
       "name": "Uramaki Califórnia",
       "cat": "Rolls",
-      "valueCents": 2090
+      "valueCents": 261
     },
     {
       "id": "rolls-uramaki-ebiten",
       "name": "Uramaki Ebiten",
       "cat": "Rolls",
-      "valueCents": 3770
+      "valueCents": 471
     },
     {
       "id": "rolls-uramaki-salmao",
       "name": "Uramaki Salmão",
       "cat": "Rolls",
-      "valueCents": 2830
+      "valueCents": 354
     },
     {
       "id": "rolls-uramaki-atum",
       "name": "Uramaki Atum",
       "cat": "Rolls",
-      "valueCents": 2930
+      "valueCents": 366
     },
     {
       "id": "rolls-hossomaki-salmao",
       "name": "Hossomaki Salmão",
       "cat": "Rolls",
-      "valueCents": 2830
+      "valueCents": 354
     },
     {
       "id": "rolls-hossomaki-atum",
       "name": "Hossomaki Atum",
       "cat": "Rolls",
-      "valueCents": 2930
+      "valueCents": 366
     },
     {
       "id": "rolls-uramaki-de-salmao-especial",
       "name": "Uramaki de Salmão Especial (Novo)",
       "cat": "Rolls",
-      "valueCents": 2438
+      "valueCents": 305
     },
     {
       "id": "sobremesa-bola-de-sorvete",
@@ -538,7 +538,7 @@
       "id": "sobremesa-hot-banana-com-nutella",
       "name": "Hot Banana com Nutella",
       "cat": "Sobremesa",
-      "valueCents": 2300
+      "valueCents": 288
     },
     {
       "id": "sobremesa-mini-banana-flambada",
@@ -612,115 +612,115 @@
       "id": "marinados-sashimi-roasted-no-alho",
       "name": "Sashimi Roasted no Alho",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-marinado-de-salmao-com-alcaparras-e-azeite",
       "name": "Marinado de Salmão com Alcaparras e azeite.",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "marinados-marinado-trufado",
       "name": "Marinado Trufado",
       "cat": "Marinados",
-      "valueCents": 6920
+      "valueCents": 231
     },
     {
       "id": "marinados-marinado-de-ervas",
       "name": "Marinado de Ervas",
       "cat": "Marinados",
-      "valueCents": 6770
+      "valueCents": 226
     },
     {
       "id": "hot-roll-mini-hot-couve",
       "name": "Mini-Hot Couve",
       "cat": "Hot Roll",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-roll-mini-hot-spicy",
       "name": "Mini-Hot Spicy",
       "cat": "Hot Roll",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "hot-roll-hot-salmao-philadelphia",
       "name": "Hot Salmão Philadelphia",
       "cat": "Hot Roll",
-      "valueCents": 3338
+      "valueCents": 417
     },
     {
       "id": "hot-roll-mini-hot-crispy",
       "name": "Mini-Hot crispy",
       "cat": "Hot Roll",
-      "valueCents": 3390
+      "valueCents": 424
     },
     {
       "id": "yakissoba-frango",
       "name": "Frango",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "yakissoba-carne-e-frango",
       "name": "Carne e frango",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "yakissoba-legumes",
       "name": "Legumes",
       "cat": "Yakissoba",
-      "valueCents": 3350
+      "valueCents": 1675
     },
     {
       "id": "yakissoba-carne",
       "name": "Carne",
       "cat": "Yakissoba",
-      "valueCents": 3770
+      "valueCents": 1885
     },
     {
       "id": "teppan-salmao",
       "name": "Salmão",
       "cat": "Teppan",
-      "valueCents": 7290
+      "valueCents": 3645
     },
     {
       "id": "sashimi-atum-salmao-peixe-branco",
       "name": "Atum | Salmão | Peixe Branco",
       "cat": "Sashimi",
-      "valueCents": 3460
+      "valueCents": 692
     },
     {
       "id": "sushi-sushi-salmao",
       "name": "Sushi Salmão",
       "cat": "Sushi",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "sushi-sushi-salmao-selado-no-alho",
       "name": "Sushi Salmão Selado no Alho",
       "cat": "Sushi",
-      "valueCents": 2190
+      "valueCents": 1095
     },
     {
       "id": "sushi-sushi-salmao-skin",
       "name": "Sushi Salmão Skin",
       "cat": "Sushi",
-      "valueCents": 1790
+      "valueCents": 895
     },
     {
       "id": "sushi-sushi-atum",
       "name": "Sushi Atum",
       "cat": "Sushi",
-      "valueCents": 2090
+      "valueCents": 1045
     },
     {
       "id": "sushi-sushi-peixe-branco",
       "name": "Sushi Peixe Branco",
       "cat": "Sushi",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "temakis-salmao-simples",
@@ -750,55 +750,55 @@
       "id": "gunkas-gunka-shake-negui",
       "name": "Gunka Shakê Negui",
       "cat": "Gunkas",
-      "valueCents": 1990
+      "valueCents": 995
     },
     {
       "id": "gunkas-gunka-crispy",
       "name": "Gunka Crispy",
       "cat": "Gunkas",
-      "valueCents": 1690
+      "valueCents": 845
     },
     {
       "id": "gunkas-gunka-luka",
       "name": "Gunka Luka",
       "cat": "Gunkas",
-      "valueCents": 1570
+      "valueCents": 785
     },
     {
       "id": "gunkas-gunka-crunchy",
       "name": "Gunka Crunchy",
       "cat": "Gunkas",
-      "valueCents": 1780
+      "valueCents": 890
     },
     {
       "id": "rolls-hossomaki-salmao",
       "name": "Hossomaki Salmão",
       "cat": "Rolls",
-      "valueCents": 2830
+      "valueCents": 354
     },
     {
       "id": "rolls-uramaki-salmao",
       "name": "Uramaki Salmão",
       "cat": "Rolls",
-      "valueCents": 2830
+      "valueCents": 354
     },
     {
       "id": "rolls-uramaki-philadelphia",
       "name": "Uramaki Philadelphia",
       "cat": "Rolls",
-      "valueCents": 2990
+      "valueCents": 374
     },
     {
       "id": "rolls-uramaki-california",
       "name": "Uramaki Califórnia",
       "cat": "Rolls",
-      "valueCents": 2090
+      "valueCents": 261
     },
     {
       "id": "rolls-hossomaki-philadelphia",
       "name": "Hossomaki Philadelphia",
       "cat": "Rolls",
-      "valueCents": 2990
+      "valueCents": 374
     },
     {
       "id": "sobremesa-bola-de-sorvete",
@@ -810,7 +810,7 @@
       "id": "sobremesa-hot-banana-com-nutella",
       "name": "Hot Banana com Nutella",
       "cat": "Sobremesa",
-      "valueCents": 2300
+      "valueCents": 288
     },
     {
       "id": "sobremesa-mini-banana-flambada",
