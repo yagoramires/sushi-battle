@@ -1,37 +1,40 @@
 'use client';
-import { useState, useRef } from 'react';
-import menu from '@/menu.json';
+import { useMemo } from 'react';
 import FoodCard from './FoodCard';
-import { applyDelta, pushPlayer } from '@/lib/consume';
 
-export default function Counter({ room, player }) {
-  const items = menu[room.menu];
-  const initial = { pieces: player.pieces, value_cents: player.value_cents, counts: player.counts || {} };
-  const [state, setState] = useState(initial);
-  // ref mirrors latest state so rapid taps chain off the newest value,
-  // not a stale render closure (fast tapping would otherwise drop pieces).
-  const latest = useRef(initial);
-  const pushTimer = useRef(null);
-
-  function change(item, delta) {
-    const next = applyDelta(latest.current, item, delta);
-    latest.current = next;
-    setState(next); // optimistic, instant
-    // Debounce the write: each push replaces the whole row, so rapid taps
-    // must not fire concurrent full-row updates (they arrive out of order and
-    // last-writer-wins would drop pieces). Coalesce to one push of the final
-    // state. ponytail: 150ms trailing debounce; pushes >150ms apart can still
-    // race in theory, but that's not a fast-tap; upgrade to a serial queue if
-    // it ever matters.
-    clearTimeout(pushTimer.current);
-    pushTimer.current = setTimeout(() => pushPlayer(player.id, latest.current), 150);
-  }
+export default function Counter({ items, counts, onChange }) {
+  // group by category once — 96 items is a lot to scan flat on a phone
+  const groups = useMemo(() => {
+    const by = new Map();
+    for (const it of items) {
+      if (!by.has(it.cat)) by.set(it.cat, []);
+      by.get(it.cat).push(it);
+    }
+    return [...by.entries()];
+  }, [items]);
 
   return (
-    <div className="grid grid-cols-2 gap-2">
-      {items.map((it) => (
-        <FoodCard key={it.id} item={it} count={state.counts[it.id] || 0}
-          onAdd={() => change(it, +1)} onRemove={() => change(it, -1)} />
+    <div className="flex flex-col gap-6 pb-8">
+      {groups.map(([cat, catItems]) => (
+        <section key={cat}>
+          <h2
+            className="mb-2 text-xs font-semibold uppercase tracking-wider"
+            style={{ color: 'var(--muted)' }}
+          >
+            {cat}
+          </h2>
+          <ul className="flex flex-col gap-2">
+            {catItems.map((it) => (
+              <FoodCard
+                key={it.id}
+                item={it}
+                count={counts[it.id] || 0}
+                onAdd={() => onChange(it, +1)}
+                onRemove={() => onChange(it, -1)}
+              />
+            ))}
+          </ul>
+        </section>
       ))}
     </div>
   );

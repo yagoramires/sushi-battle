@@ -1,24 +1,49 @@
 import { MdAdd, MdRemove } from 'react-icons/md';
+import { formatBRL } from '@/lib/money';
 
 export default function FoodCard({ item, count, onAdd, onRemove }) {
+  const active = count > 0;
   return (
-    <li className="w-full bg-zinc-900 shadow-md rounded-md border-zinc-100 p-4 flex items-center overflow-hidden justify-between px-4">
-      <div className="flex items-center gap-4">
-        <p className="font-medium text-sm">{item.name}</p>
+    <li
+      className="flex items-center justify-between gap-3 rounded-xl border p-3 transition-colors"
+      style={{
+        background: 'var(--slate)',
+        borderColor: active ? 'var(--salmon)' : 'var(--line)',
+      }}
+    >
+      <div className="min-w-0">
+        <p className="text-sm font-medium leading-snug">{item.name}</p>
+        <p className="text-xs tnum" style={{ color: 'var(--muted)' }}>
+          {formatBRL(item.valueCents)}
+        </p>
       </div>
 
-      <div className="flex items-center gap-4">
-        <MdRemove
-          className="bg-zinc-600 rounded-full cursor-pointer"
+      <div className="flex shrink-0 items-center gap-1">
+        <button
+          type="button"
           onClick={onRemove}
-          size={20}
-        />
-        <p className="font-bold w-[30px] text-center">{count || 0}</p>
-        <MdAdd
-          className="bg-zinc-600 rounded-full cursor-pointer"
+          disabled={!active}
+          aria-label={`Remover um ${item.name}`}
+          className="grid h-9 w-9 place-items-center rounded-lg text-xl disabled:opacity-30"
+          style={{ background: 'var(--slate-2)', color: 'var(--rice)' }}
+        >
+          <MdRemove aria-hidden />
+        </button>
+        <span
+          className="w-8 text-center font-display text-xl tnum"
+          style={{ color: active ? 'var(--salmon)' : 'var(--muted)' }}
+        >
+          {count}
+        </span>
+        <button
+          type="button"
           onClick={onAdd}
-          size={20}
-        />
+          aria-label={`Adicionar um ${item.name}`}
+          className="grid h-9 w-9 place-items-center rounded-lg text-xl"
+          style={{ background: 'var(--salmon)', color: 'var(--salmon-ink)' }}
+        >
+          <MdAdd aria-hidden />
+        </button>
       </div>
     </li>
   );

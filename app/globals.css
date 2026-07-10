@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --nori: #0f0f10;      /* page background — deep seaweed black */
+  --slate: #1b1b1f;     /* raised surface */
+  --slate-2: #26262b;   /* card / control */
+  --line: #34343b;      /* hairline */
+  --rice: #faf9f5;      /* primary text — warm white */
+  --muted: #8b8b93;     /* secondary text */
+  --salmon: #ff7a4d;    /* primary accent */
+  --salmon-ink: #2a1207;/* text on salmon */
+  --wasabi: #7ccf6a;    /* profit / winning */
+  --tuna: #ff4d5e;      /* loss / losing */
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--nori);
+  color: var(--rice);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Big scoreboard numerals */
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'tnum' 1;
+}
+
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* Keyboard focus that's actually visible on the dark ground */
+:focus-visible {
+  outline: 2px solid var(--salmon);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

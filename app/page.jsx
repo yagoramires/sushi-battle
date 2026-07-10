@@ -3,12 +3,38 @@ import JoinTableForm from '@/components/JoinTableForm';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center gap-8 p-6 max-w-md mx-auto">
-      <h1 className="text-3xl font-bold mt-6">🍣 Sushi Battle</h1>
-      <p className="text-xs text-center text-zinc-400">A mesa toda contra o restaurante.</p>
-      <section className="w-full"><h2 className="mb-2 font-semibold">Criar mesa</h2><CreateTableForm /></section>
-      <div className="text-zinc-500 text-sm">ou</div>
-      <section className="w-full"><h2 className="mb-2 font-semibold">Entrar numa mesa</h2><JoinTableForm /></section>
+    <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-5 pb-10 pt-12">
+      <header className="mb-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: 'var(--salmon)' }}>
+          🍣 Sushi Battle
+        </p>
+        <h1 className="mt-3 font-display text-5xl leading-[0.95]">
+          A mesa toda
+          <br />
+          contra o<br />
+          restaurante.
+        </h1>
+        <p className="mt-3 text-sm" style={{ color: 'var(--muted)' }}>
+          Cada um conta o que come. Peça a peça, o placar diz quem tá lucrando no rodízio.
+        </p>
+      </header>
+
+      <section className="mb-6">
+        <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--muted)' }}>
+          Criar mesa
+        </h2>
+        <CreateTableForm />
+      </section>
+
+      <div className="my-2 flex items-center gap-3 text-xs" style={{ color: 'var(--muted)' }}>
+        <span className="h-px flex-1" style={{ background: 'var(--line)' }} />
+        ou entra numa
+        <span className="h-px flex-1" style={{ background: 'var(--line)' }} />
+      </div>
+
+      <section>
+        <JoinTableForm />
+      </section>
     </main>
   );
 }
