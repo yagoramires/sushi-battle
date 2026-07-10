@@ -29,3 +29,6 @@ docs/superpowers/
 .playwright-mcp/
 .superpowers/
 pnpm-lock.yaml
+
+# stray screenshots at repo root
+/*.png
