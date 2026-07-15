@@ -142,19 +142,19 @@
       "id": "entradas-robata-de-carne",
       "name": "Robata de Carne",
       "cat": "Entradas",
-      "valueCents": 912
+      "valueCents": 228
     },
     {
       "id": "entradas-robata-de-camarao",
       "name": "Robata de Camarão",
       "cat": "Entradas",
-      "valueCents": 912
+      "valueCents": 228
     },
     {
       "id": "entradas-robata-de-lula",
       "name": "Robata de Lula",
       "cat": "Entradas",
-      "valueCents": 912
+      "valueCents": 228
     },
     {
       "id": "entradas-isca-de-tilapia",
@@ -166,7 +166,7 @@
       "id": "entradas-casquinha-de-salmao",
       "name": "Casquinha de Salmão",
       "cat": "Entradas",
-      "valueCents": 912
+      "valueCents": 228
     },
     {
       "id": "entradas-ika-no-furai",

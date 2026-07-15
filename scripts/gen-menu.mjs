@@ -47,6 +47,7 @@ const rodizioValue = (cat, name, perPiece) => {
   if (/ceviche/.test(n)) return perPiece * 0.28;                 // porção, não peça
   if (c.includes('entrada')) {
     if (/harumaki/.test(n)) return perPiece * 0.70;              // unidade frita
+    if (/casquinha|robata/.test(n)) return perPiece * 0.07;      // petisco unidade (~R$2)
     if (/dadinho|croqueta|bolinho/.test(n)) return perPiece * 0.13; // unidade pequena
     if (/camarao empanado|nira|ika no furai/.test(n)) return perPiece * 0.15; // porção grande à-la-carte
     return perPiece * 0.28;
