@@ -37,6 +37,29 @@ const piecesFor = (cat, name, refName) => {
   return 1;
 };
 
+// The à-la-carte portion is bigger than what you actually get served per rodízio
+// round, so we scale the per-piece à-la-carte value down to what a rodízio-sized
+// serving of that item is really worth. Factors tuned with the client per item.
+const rodizioValue = (cat, name, perPiece) => {
+  const c = norm(cat), n = norm(name);
+  if (/sushi/.test(n)) return Math.min(perPiece * 0.28, 300);   // sushi ≤ R$3/peça
+  if (c.includes('sashimi')) return Math.min(perPiece * 0.40, 300); // sashimi ≤ R$3
+  if (/ceviche/.test(n)) return perPiece * 0.28;                 // porção, não peça
+  if (c.includes('entrada')) {
+    if (/harumaki/.test(n)) return perPiece * 0.70;              // unidade frita
+    if (/dadinho|croqueta|bolinho/.test(n)) return perPiece * 0.13; // unidade pequena
+    if (/camarao empanado|nira|ika no furai/.test(n)) return perPiece * 0.15; // porção grande à-la-carte
+    return perPiece * 0.28;
+  }
+  if (c.includes('yakissoba')) return perPiece * 0.25;          // 500g à-la-carte → ~125g
+  if (c.includes('teppan')) return perPiece * 0.28;
+  if (c.includes('temaki')) return perPiece * 0.38;
+  if (c.includes('sobremesa')) return perPiece * 0.28;
+  if (c.includes('onigiri')) return perPiece * 0.42;
+  if (c.includes('gunka')) return perPiece * 0.55;
+  return perPiece * 0.7; // rolls, marinados, hot rolls
+};
+
 // portion price in cents for the 11 rodízio items with no à-la-carte category match.
 // Keys are the fully-hyphenated `id` (slug(cat, name)).
 const OVERRIDES = {
@@ -77,7 +100,7 @@ const matchIn = (cat, name, overrideKey) => {
   return null;
 };
 
-const buildRoot = (rootName) => {
+const buildRoot = (rootName, scale = true) => {
   const root = rootBy(rootName);
   const out = [];
   for (const m of root.menus) for (const it of m.menuItems || []) {
@@ -86,12 +109,15 @@ const buildRoot = (rootName) => {
     const match = matchIn(m.name.pt, name, id);
     if (!match || match.portion <= 0) throw new Error('unpriced: ' + id);
     const pieces = piecesFor(m.name.pt, name, match.refName);
-    const valueCents = Math.max(1, Math.round(match.portion / pieces));
+    const perPiece = match.portion / pieces;
+    // Executivo keeps the à-la-carte per-piece value straight from the site; only
+    // the rodízio is scaled down to rodízio-sized servings.
+    const valueCents = Math.max(1, Math.round(scale ? rodizioValue(m.name.pt, name, perPiece) : perPiece));
     out.push({ id, name, cat: m.name.pt.trim(), valueCents });
   }
   return out;
 };
 
-const menu = { rodizio: buildRoot('rodizio'), executivo: buildRoot('rodizio executivo') };
+const menu = { rodizio: buildRoot('rodizio'), executivo: buildRoot('rodizio executivo', false) };
 writeFileSync('menu.json', JSON.stringify(menu, null, 2));
 console.log('rodizio', menu.rodizio.length, 'executivo', menu.executivo.length);
